@@ -1,0 +1,12 @@
+<h1>Tabla multiplicar</h1>
+<form #formnumero="ngForm">
+    <label>Numero: </label>
+    <input type="number" [(ngModel)]="numero" name="cajanumero" 
+    #cajanumero="ngModel"/>
+    <button>Generar tabla multiplicar</button>
+</form>
+<ul style="color:blue"> 
+    @for(num of numeros; track num) {
+        <li>{{numero * num}}</li>
+    }
+</ul> 

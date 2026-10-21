@@ -1,0 +1,14 @@
+<h1>Tabla multiplicar V2</h1>
+<form #multiplicarform="ngForm" (ngSubmit)="multiplicarNumeros()">
+    <label>Numero 1: </label>
+    <input type="number" #cajanumero/><br/>
+    <button>Generar tabla multiplicar</button>
+</form>
+<table border="1">
+    @for (num of numeros; track num) {
+        <tr>
+            <td>{{numero}} * {{num}}</td>
+            <td>{{numero*num}}</td>
+        </tr>
+    }
+</table>
